@@ -7,7 +7,7 @@ This is an unofficial Tensorflow implementation of MixMatch:[MixMatch: A Holisti
 |  Implementation/Labels  |     250    |     500    |    1000    |    2000    |    4000    | 
 | ----------------------- |-----------:|-----------:|-----------:|-----------:|-----------:|
 | MixMatch Paper          | 88.92±0.87 | 90.35±0.94 | 92.25±0.32 | 92.97±0.15 | 93.76±0.06 |
-| mixmatch-tensorflow2.0  |       |            |            |            |            |
+| mixmatch-tensorflow  |       |            |            |            |            |
 
 ### Prerequisites
 pip installs:
