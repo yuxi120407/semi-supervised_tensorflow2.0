@@ -19,6 +19,13 @@ tensorflow-datasets>=1.2.0
 tqdm>=4.36.1
 ~~~
 
+### Hyperparameters
+~~~
+Epoch = 1024
+lr = 0.01
+batch-size = 64
+~~~
+
 ### Citations
 ~~~
 @misc{berthelot2019mixmatch,
