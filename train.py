@@ -11,7 +11,16 @@ from utils import split_dataset,linear_rampup,mixmatch,interleave,semi_loss,ema,
 from model import WideResNet
 import numpy as np
 from tqdm import tqdm
+
+#%%parameter
+learningrate = 0.002
+batchsize = 64
+epoch = 1024
+num_label = 4000
+num_validation = 5000
+lambda_u_max = 100
 #%%
+
 (x_train, y_train),(x_test, y_test) = datasets.cifar10.load_data()
 #x_train = normalize_image(tf.cast(x_train, dtype=tf.float32))
 y_train = tf.one_hot(y_train, depth=10, dtype=tf.float32)
@@ -173,7 +182,7 @@ for epoch in range(2):
         grads = tape.gradient(total_loss, model.trainable_variables)
         optimizer.apply_gradients(zip(grads, model.trainable_variables))
         ema(model, ema_model, 0.999)
-        weight_decay(model=model, decay_rate=0.02 * 0.01)
+        weight_decay(model=model, decay_rate=0.02 * 0.002)
 
         xe_loss_avg(xe_loss)
         l2u_loss_avg(l2u_loss)
