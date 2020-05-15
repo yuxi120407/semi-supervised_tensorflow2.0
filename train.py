@@ -130,9 +130,6 @@ def validate(dataset, model, epoch,split):
         prediction = tf.argmax(logits, axis=1, output_type=tf.int32)
         accuracy(prediction, tf.argmax(batch['label'], axis=1, output_type=tf.int32))
     print(f'Epoch {epoch:04d}: {split} XE Loss: {xe_avg.result():.4f}, {split} Accuracy: {accuracy.result():.3%}')
-
-
-
     return xe_avg, accuracy    
 #%%
 import time
@@ -196,6 +193,15 @@ for epoch in range(2):
         #     'Total Loss': f'{total_loss_avg.result():.4f}',
         #     'Accuracy': f'{accuracy.result():.3%}'
         # })
+                if batch_num % 512 == 0:
+            print("Step: {}, xe: {:.3f},l2u:{:.4},total: {:.3f},w_u:{:.2f},acc: {:.2%},time:{:.2f}s"
+                  .format(batch_num + 1,xe_loss_avg.result(),l2u_loss_avg.result(),
+                 total_loss_avg.result(),lambda_u,accuracy.result(),(time.time() - start_time)))
+    xe_avg, test_accuracy = validate(cifar10_test_dataset, ema_model, epoch,'test')
+    with open('./log/test.txt','a') as f:
+        f.write("Step: {}, xe: {:.3f},l2u:{:.4},total: {:.3f},w_u:{:.2f},acc: {:.2%},test_acc:{:.2%}\n"
+                      .format(batch_num + 1,xe_loss_avg.result(),l2u_loss_avg.result(),
+                     total_loss_avg.result(),lambda_u,accuracy.result(),test_accuracy.result()))
     print("Epoch: {}, xe: {:.3f},l2u:{:.3f},w_u: {:.3f},total: {:.3f},acc: {:.2%},time:{:.2f}s"
       .format(epoch + 1,xe_loss_avg.result(),l2u_loss_avg.result(),
       lambda_u,total_loss_avg.result(),accuracy.result(),(time.time() - start_time)))
