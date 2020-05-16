@@ -22,9 +22,9 @@ tqdm>=4.36.1
 ### Hyperparameters
 ~~~
 Epoch = 1024
-lr = 0.01
+lr = 0.002
 batch-size = 64
-~~~±0.12|
+~~~
 
 ### Citations
 ~~~
