@@ -1,5 +1,5 @@
 ##  Semi-Supervised Learning tensorflow2.0
-This is an Tensorflow implementation of semi-supervised learning with the following methods: [Pseudo-label](http://deeplearning.net/wp-content/uploads/2013/03/pseudo_label_final.pdf), [Pi_model](https://arxiv.org/abs/1610.02242), [VAT](https://arxiv.org/abs/1704.03976), [mean_teacher](https://arxiv.org/abs/1703.01780), [Mixup](https://arxiv.org/abs/1710.09412), [ICT](https://www.ijcai.org/Proceedings/2019/0504.pdf) and [Mixmatch]((https://arxiv.org/abs/1905.02249)
+This is an Tensorflow implementation of semi-supervised learning with the following methods: [Pseudo-label](http://deeplearning.net/wp-content/uploads/2013/03/pseudo_label_final.pdf), [Pi_model](https://arxiv.org/abs/1610.02242), [VAT](https://arxiv.org/abs/1704.03976), [mean_teacher](https://arxiv.org/abs/1703.01780), [Mixup](https://arxiv.org/abs/1710.09412), [ICT](https://www.ijcai.org/Proceedings/2019/0504.pdf) and [Mixmatch](https://arxiv.org/abs/1905.02249).
 
 
 ### Results
