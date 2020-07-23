@@ -4,7 +4,7 @@ This is an Tensorflow implementation of semi-supervised learning with the follow
 
 ### Results
 #### CIFAR-10
-|  Methods               |     250     |    4000    | 
+|  Methods               |     original paper    |    ours   | 
 | ----------------------- |-----------:|-----------:|
 | MixMatch Paper          | 88.92±0.87 | 93.76±0.06 |
 | mixmatch-tensorflow     |            |            |
