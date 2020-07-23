@@ -3,7 +3,7 @@ This is an Tensorflow implementation of semi-supervised learning with the follow
 
 
 ### Results
-#### CIFAR-10
+#### CIFAR-10 (4k)
 |  Methods               |     original paper   |   ours   | 
 | -----------------------|---------------------:|---------:|
 | MixMatch               |      93.76±0.06      | 93.67    |
