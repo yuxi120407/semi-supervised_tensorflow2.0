@@ -4,10 +4,16 @@ This is an Tensorflow implementation of semi-supervised learning with the follow
 
 ### Results
 #### CIFAR-10
-|  Methods               |     original paper    |    ours   | 
-| ----------------------- |-----------:|-----------:|
-| MixMatch Paper          | 88.92±0.87 | 93.76±0.06 |
-| mixmatch-tensorflow     |            |            |
+|  Methods               |     original paper   |   ours   | 
+| -----------------------|---------------------:|---------:|
+| MixMatch               |      93.76±0.06      | 93.67    |
+| Pi_model               |                      | 86.55    |
+| Pseudo-label           |                      | 84.9     |
+| VAT                    |                      | 88.3     |
+| VAT_EM                 |                      | 90.11    |
+| Mean_teacher           |                      | 89.47    |
+| Mixup                  |                      | 86.5     |
+| ICT                    |                      | 92.92    |
 
 ### Prerequisites
 pip installs:
